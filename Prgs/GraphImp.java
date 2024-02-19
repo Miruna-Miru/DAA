@@ -22,7 +22,7 @@ public class GraphImp {
             System.out.println("Duplicate edge: Edge already exists between vertex " + src + " and " + des);
         } else {
             adj[src].add(des);
-            // adj[des].add(src); // Uncomment if the graph is undirected
+            // adj[des].add(src); 
         }
     }
 
