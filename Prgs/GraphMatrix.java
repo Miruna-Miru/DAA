@@ -55,6 +55,24 @@ public class GraphMatrix {
         v--;
     }
 
+    int calculateInDegree(int vertex) {
+        int inDegree = 0;
+        for (i = 0; i < v; i++) {
+            if (adjM[i][vertex] == 1)
+                inDegree++;
+        }
+        return inDegree;
+    }
+
+   int calculateOutDegree(int vertex) {
+        int outDegree = 0;
+        for (j = 0; j < v; j++) {
+            if (adjM[vertex][j] == 1)
+                outDegree++;
+        }
+        return outDegree;
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int v = 4, n, x, y;
@@ -98,5 +116,8 @@ public class GraphMatrix {
         gm.delVertexM(x);
         System.out.print("New graph  :\n");
         gm.disGrM();
+       int ve=2;
+      System.out.println("In-degree of " + ve + ": " + gm.calculateInDegree(ve));
+        System.out.println("Out-degree of  " + ve + ": " + gm.calculateOutDegree(ve));
     }
 }
