@@ -66,9 +66,12 @@ public class GraphImp {
         adj[src].remove(Integer.valueOf(de));
     }
 
-    void disG() {
-        for (i = 0; i < v; i++) {
-            if (!adj[i].isEmpty()) {
+    void disG()
+   {
+        for (i = 0; i < v; i++) 
+     {
+            if (!adj[i].isEmpty()) 
+      {
                 System.out.print("Vertex " + i + " is connected to : ");
                 for (Integer x : adj[i])
                     System.out.print(x + "   ");
@@ -92,16 +95,16 @@ public class GraphImp {
 
         g.disG();
 
-        System.out.print("Enter vertex to be added : ");
+        System.out.print("Enter vertex to be delted : ");
         x = inp.nextInt();
-        g.addVertex(x);
+        g.delVertex(x);
         System.out.print("New Graph : \n");
         g.disG();
 
-        System.out.print("Enter edge to be added  (src dest) : ");
+        System.out.print("Enter edge to be deleted (src dest) : ");
         x = inp.nextInt();
         y = inp.nextInt();
-        g.addEdge(x, y);
+        g.delEdge(x, y);
         System.out.print("New Graph : \n");
         g.disG();
         
