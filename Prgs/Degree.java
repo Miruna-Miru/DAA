@@ -54,8 +54,18 @@ public class Degree
          }
       return c;
 }
-
-
+//ANOTHER METHOD
+/*
+    int calculateInDegree(int vertex) {
+        int inDegree = 0;
+        for (int i = 0; i < v; i++) {
+            if (adjList[i].contains(vertex)) {
+                inDegree++;
+            }
+        }
+        return inDegree;
+    }
+*/
 public static void main(String args[])
 {
    Degree d = new Degree(4);
